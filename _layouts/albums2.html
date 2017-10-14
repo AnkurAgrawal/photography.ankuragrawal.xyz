@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+
+<head>
+  <!--[if lte IE 8]>
+    <script src="/js/albums/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/css/albums/main.css"/>
+  <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/css/albums/ie9.css"/><![endif]-->
+  <!--[if lte IE 8]>
+    <link rel="stylesheet" href="/css/albums/ie8.css"/><![endif]-->
+</head>
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="site-heading">
+          <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+          <hr class="small">
+          <span class="subheading">{{ page.description }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="row">
+  {{ content }}
+</div>
+
+<!-- Scripts -->
+<script src="/js/albums/jquery.min.js"></script>
+<script src="/js/albums/jquery.poptrox.js"></script>
+<script src="/js/albums/skel.min.js"></script>
+<script src="/js/albums/util.js"></script>
+<script src="/js/albums/exif.js"></script>
+<!--[if lte IE 8]>
+  <script src="/js/albums/ie/respond.min.js"></script><![endif]-->
+<script src="/js/albums/main.js"></script>

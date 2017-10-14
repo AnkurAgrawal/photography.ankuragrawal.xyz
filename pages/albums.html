@@ -1,0 +1,36 @@
+---
+layout: albums
+title: "ALBUMS"
+description: "archive"
+permalink: /albums/
+active: gallery
+header-img: "img/gallery-bg.jpg"
+---
+
+<div class="gallery">
+  <section id="content" role="main">
+    <div class="wrapper">
+      <!-- Gallery __-->
+      <div class="gallery masonry-gallery">
+        {% assign sorted_albums = site.albums | sort: "order" %}
+        {% for album in sorted_albums %}
+        <figure class="gallery-item">
+          <figure class="effect-selena">
+            <header class='gallery-icon'>
+              <a href="{{ album.url }}">
+                <img src="{{ site.cdn_path }}{{ album.cover-image }}">
+              </a>
+            </header>
+            <figcaption class='gallery-caption'>
+              <div class="entry-summary">
+                <h3>{{album.title}}</h3>
+                <p>{{album.date}}</p>
+              </div>
+            </figcaption>
+          </figure>
+        </figure>
+        {% endfor %}
+      </div>
+    </div><!-- END .wrapper -->
+  </section>
+</div>

@@ -1,0 +1,91 @@
+# Site settings
+title: Colorful mind
+# email: "me@ankuragrawal.xyz"
+description: "Photo Journal"
+url: "https://photos.ankuragrawal.xyz/"
+baseurl: ""
+image_fulls_loc: "/img/fulls"
+image_thumbs_loc: "/img/thumbs"
+# google_analytics: "UA-46465113-2"
+# facebook_username: ""
+# twitter_username: ""
+# instagram_username: ""
+# github_username:  ""
+# deviantart_username: ""
+# flickr_username: ""
+# discus_shortname: ""
+share: true
+
+# Owner/author information
+owner:
+  name:   ankur agrawal
+  avatar: avatar.png
+  favicon: favicon.ico
+  info: photography
+
+# Settings for comments helper
+# Set 'provider' to the comment provider you want to use. (i.e.  Disqus, Intense Debate, livefyre, or Facebook Comments)
+# Set 'provider' to false to turn commenting off globally.
+#Set 'provider: false' to disable comments globally.
+# Disable comments for individual pages/posts by specifying 'comments: false' in the page/post YAML Front Matter.
+#
+comments :
+  provider : disqus
+  disqus :
+    short_name : "ankuragrawal"
+
+# Internal nav
+nav:
+  - PORTFOLIO: "https://portfolio.ankuragrawal.xyz"
+  - GALLERY: "https://photography.ankuragrawal.xyz/albums/"
+  # - JOURNAL: "https://photography.ankuragrawal.xyz/journal/"
+  - ABOUT: "https://ankuragrawal.xyz/about/"
+  - CONTACT: "https://ankuragrawal.xyz/contact/"
+
+# All translation keys
+translations:
+ # 404.html
+  permalink: "/404.html"
+
+# Server
+destination:      	 ./_site
+port:             	 4000
+
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+paginate_path: "/journal/page:num/"
+permalink: "/journal/:title/"
+categories_path: "/journal/category/"
+tags_path: "/journal/tag/"
+plugins:
+ - jekyll-paginate
+ - jekyll-cloudinary
+
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+collections:
+  albums:
+    output: true
+
+cloudinary:
+  cloud_name: ankuragrawal
+cdn_path: http://res.cloudinary.com/ankuragrawal/image/upload/f_auto,q_auto,w_auto/photos/
+
+image_meta:
+  copyright: © Ankur Agrawal
+
+# SiteMap
+sitemap:
+  file: "/sitemap.xml"
+  exclude:
+      - "/atom.xml"
+      - "/feed.xml"
+      - "/feed/index.xml"
+  include_posts:
+      - "/writing/"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
