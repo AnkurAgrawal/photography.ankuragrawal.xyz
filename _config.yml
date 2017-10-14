@@ -36,7 +36,7 @@ comments :
 
 # Internal nav
 nav:
-  - PORTFOLIO: "https://portfolio.ankuragrawal.xyz"
+  - PORTFOLIO: "https://ankuragrawal.xyz/portfolio"
   - GALLERY: "https://photography.ankuragrawal.xyz/albums/"
   # - JOURNAL: "https://photography.ankuragrawal.xyz/journal/"
   - ABOUT: "https://ankuragrawal.xyz/about/"
